@@ -221,10 +221,10 @@ struct dsi_panel {
 
 	bool sync_broadcast_en;
 
-	struct dsi_panel_exd_config exd_config;
 #ifdef VENDOR_EDIT
 /*liping-m@PSW.MM.Display.Service.Feature,2018/9/26,for OnScreenFingerprint feature*/
-	bool is_hbm_enabled; //satisfy oppo_display_private_api
+	bool is_hbm_enabled;
+
 /*liping-m@PSW.MM.Display.LCD.Stable,2018/9/26 fix aod flash problem */
 	bool need_power_on_backlight;
 #endif
@@ -334,5 +334,4 @@ void dsi_panel_ext_bridge_put(struct dsi_panel *panel);
 int dsi_panel_tx_cmd_set(struct dsi_panel *panel,
 			   enum dsi_cmd_set_type type);
 #endif
-
 #endif /* _DSI_PANEL_H_ */
